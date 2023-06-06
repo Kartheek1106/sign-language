@@ -1,23 +1,65 @@
-import logo from './logo.svg';
+/* jshint ignore:start */
 import './App.css';
+import MyNavbar from './components/navbar';
+
+import mainPic from './images/main-picture.png';
+import aslPic from './images/asl logo.png';
+import islPic from './images/isl logo.png';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <MyNavbar></MyNavbar>
+      </div> 
+
+      <div className='topContainer'>  
+        <div className='contents'>    
+          <div className='titles'>
+            Sign Language Translator
+          </div>
+        </div>
+        <div className='image1'>    
+          <img className='mainImage' src={mainPic} alt=''></img>
+        </div> 
+      </div> 
+      
+      <div className='middleContainer'>
+        <div className='container1'>
+          <div className='aslContainer'>
+            <div className='imageContainer'>
+              <img className='logo' src={aslPic} alt=''></img>
+            </div>
+            <div className='contents1'>
+              <div className='text'>
+                <h2 className='mainTitle'>American Sign Language</h2>
+                <h4 className='line'>Translate between ASL and text with the following links..</h4>
+              </div>
+              <div className='links'>
+                <a class="btn btn-info link1" href="/asl2text" role="button">ASL to Text</a>
+                <a class="btn btn-info link1" href="/text2asl" role="button">Text to ASL</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='container2'>
+          <div className='islContainer'>
+            <div className='imageContainer'>
+              <img className='logo' src={islPic} alt=''></img>
+            </div>
+            <div className='contents1'>
+              <div className='text'>
+                <h2 className='mainTitle'>Indian Sign Language</h2>
+                <h4 className='line'>Translate between ISL and text with the following links..</h4>
+              </div>
+              <div className='links'>
+                <a class="btn btn-info link1" href="/isl2text" role="button">ISL to Text</a>
+                <a class="btn btn-info link1" href="/text2isl" role="button">Text to ISL</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
